@@ -1,2 +1,2 @@
 # TechClass
-Files to send to students
+Files to share with students
