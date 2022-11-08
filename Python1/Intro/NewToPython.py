@@ -1,10 +1,16 @@
-# This is a comment.
+# This is a comment. Python doesn't do anything with it. It's meant for humans to read.
 
-"This is a string."
+"This is a string. It's an array of characters, like numbers and letters."
 
-print("This is a print statement.")
+print("This is a print statement. We are telling Python to print the string inside of the parentheses.")
 
-def dumbFunction(word, number): # <--- This is a function.
+# print() is a built-in Python function.
+# Functions can do all sorts of things.
+# We can create our own functions as well.
+
+def dumbFunction(word, number): # This is how we define a function. 
     print(word * number)
 
-dumbFunction("Cheese", 3) # <--- This is a function call.
+dumbFunction("Cheese", 3) # This is a function call. We are using the function that we just created.
+
+# Hit the F5 key to run the program, then look at the terminal down below.
