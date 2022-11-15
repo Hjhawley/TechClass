@@ -1,0 +1,68 @@
+Infix to Postfix
+infix: "3 + 4 * 5 - 6"
+
+
+If it's a number or variable x, add it to postfix. If it's an operator, push it onto the stack.
+Higher priority operations go on top of the stack.
+
+If an equal or lower priority operation comes along, first push ALL equal or higher operations
+from the top of the stack onto postfix. Then push the operation onto the stack.
+
+postfix: "3 4 5 * + 6 -"
+
+***
+
+Evaluate Postfix
+"3 4 5 * + 6 -"
+
+  5
+  4
+  3
+STACK
+
+4 * 5 = 20
+  3
+STACK
+
+ 20
+  3
+STACK
+
+20 + 3 = 23
+STACK
+
+  6
+ 23
+STACK
+
+23 - 6 = 17
+
+return 17
+
+***
+
+Another example using parentheses
+
+infix: "3 * (4 + 5 - 1) / 6 + x"
+postfix: "3 4 5 + 1 - * 6 / x +
+
+evaluate: 
+
+  5
+  4
+  3
+STACK
+
+5 + 4 = 9
+  3
+STACK
+
+9 - 1 = 8
+  3
+STACK
+
+***
+
+infix: 1 - (2 + x / 2 - 1) * 2
+postfix: "1 2 x 2 / + 1 - 2 * -"
+eval : 9 if x = -10

@@ -1,0 +1,40 @@
+Orders of Magnitude
+
+2^1 = 2
+2^2 = 4
+2^3 = 8
+2^4 = 16
+2^5 = 32
+2^6 = 64
+2^7 = 128
+2^8 = 256
+2^9 = 512
+2^10 = 1024 aka 1K
+2^11 = 2048 aka 2K
+2^12 = 4K
+2^13 = 8K
+...
+2^19 = 512K
+2^20 = 1M
+2^23 = 8M
+2^30 = 1B
+2^37 = 128B
+2^40 = 1T
+2^48 = 256T
+
+In other words:
+2^30 = 10^9
+2^40 = 10^12
+2^50 = 10^15
+2^60 = 10^18
+2^70 = 10^21
+2^80 = 10^24
+
+These numbers are incomprehensibly big.
+2^80 seconds is 512 million times greater than the age of the universe.
+
+Binary search = log(base 2) of N
+Linear search = N
+Towers of Hanoi = 2 to the N
+Sat problem = 2 to the N 
+Traveling salesman = N factorial

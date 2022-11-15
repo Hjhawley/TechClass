@@ -1,0 +1,21 @@
+CLUSTERING is the enemy of the Hash Table.
+Clustering is when many items want to go into a particular range of
+"parking spots" and have to walk down to find an empty one.
+This makes it difficult to insert or retrieve items in high-traffic areas.
+How do we fight it?
+
+One solution is to use quadratic probing rather than linear probing.
+Instead of walking one step at a time to find a spot, take bigger steps.
+1 step, then 4, then 9, then 16, then 25, etc...
+
+This solution is okay but it doesn't help when many items want the
+EXACT same parking spot. They will all simply follow the same quadratic steps
+to find the next empty spot.
+
+In cases like this, we can use a DOUBLE HASH.
+Every item gets assigned a unique skip value based on its key.
+For example, if the clustering happens around index 100, the skip value could be
+	skip = key % 100 + 100
+
+Another solution: SEPARATE CHAINING
+When multiple items want the same spot, turn that spot into a linked list or a BST.

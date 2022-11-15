@@ -1,0 +1,9 @@
+Programming II - Objects and Advanced Concepts
+This second programming course will give students a deeper understanding of the python
+programming language and introduce students to the concept of object-oriented
+programming using classes to define objects. Students will also be introduced to
+advanced concepts including dictionary data structures, recursive problem solving,
+and searching and sorting algorithms. Students will learn concepts by creating simple
+games using objects to structure their programs, and creating functions within the
+objects using advanced algorithms. Students will also be introduced to basic graphics
+programming with objects.

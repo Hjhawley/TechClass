@@ -1,0 +1,9 @@
+Programming I - Fundamental Programming Concepts
+This is an introductory course in programming using the Python 3 programming language
+and the Visual Studio Code IDE. Students will learn basic computer programming concepts
+including strings, variables, methods, functions, conditionals, loops, and lists.
+They will learn to write and run python code with small exercises for each concept,
+as well as more challenging exercises to combine concepts. They will also gain
+experience writing complete python programs using all the concepts to create simple
+text based games. Students will have a fundamental understanding of programming language
+concepts that will aid in learning any language.

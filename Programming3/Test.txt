@@ -1,0 +1,33 @@
+What is approximately Log base 2 of 33,000,000,000,000?
+45; four groups of three zeroes, ending in 5 which is close to 32
+
+What is 3 to the power of 4?
+81
+
+What is Big-O Analysis?
+Study of how WORK increases as PROBLEM SIZE increases
+
+Give the Big-O for:
+Appending to the end of a python list - 1
+Removing from the beginning - N
+Traveling salesperson - N!
+Counting Sort - N
+Adding two numbers of N digits each - N
+
+Which Big-O category does this code use?
+For loop N times
+	For loop N times
+		Do N^3 work
+	For loop N times
+		For loop N times
+			Do N^2 work
+		For loop N times
+			Do N work here
+Answer: N^5
+
+Linked Lists & Enqueueing
+n.mNext = tail.mNext
+tail.mNext = n
+tail = n
+
+Write Python code for Bubble Sort, Shaker Sort, etc...

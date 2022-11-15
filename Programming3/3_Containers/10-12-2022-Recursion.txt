@@ -1,0 +1,18 @@
+Recursion - solving a problem by breaking it into smaller versions of itself
+
+Factorial
+6! = 6*5*4*3*2*1
+5! =   5*4*3*2*1
+n! = n*(n-1)!   if n > 1
+n! = 1          if n! == 1
+
+def F(n):
+    if n == 1:
+        return 1
+    else:
+        return n*F(n-1)     # Execute an identical copy of the function, using n-1 as the argument.
+
+Towers of Hanoi
+Think of it as moving every disc on the stack except for the bottom,
+then moving the bottom disc, then moving the stack on top of it.
+

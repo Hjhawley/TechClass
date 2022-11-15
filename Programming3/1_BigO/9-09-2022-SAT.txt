@@ -1,0 +1,15 @@
+The Boolean Satisfiability Problem (or SAT Problem)
+Given a set of boolean operations for N variables, check to see if there is a
+configuration such that the overall operation will be true.
+For example: the formula "a and !b" is satisfiable because one can find the
+values a = True and b = False, which make (a and !b) = True. In contrast,
+"a and !a" is unsatisfiable.
+This is an NP problem. It becomes impossible to solve with too many variables,
+but if the answer is already known it can be verified very quickly.
+
+P = solvable in polynomial time
+NP = non-deterministic polynomial (appear to be exponential but can be verified in polynomial time)
+
+If we were to solve the SAT problem (if there is a solution) we would by extension
+also solve every NP problem, as all NP problems can be mapped to SAT and would be
+solvable in polynomial time. In other words, P = NP would be true.
