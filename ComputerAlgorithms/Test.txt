@@ -1,0 +1,49 @@
+What is approximately Log base 2 of 33,000,000,000,000?
+45; four groups of three zeroes, ending in 5 which is close to 32
+
+What is 3 to the power of 4?
+81
+
+What is Big-O Analysis?
+Study of how WORK increases as PROBLEM SIZE increases
+
+Give the Big-O for:
+Appending to the end of a python list - 1
+Deleting from the beginning of a python list - N
+Deleting an item from a linked list - N
+Deleting an item from a well-balanced BST - logN
+Deleting an item from a badly degenerated BST - N
+Traveling salesperson problem - N!
+Counting sort - N
+Adding two numbers of N digits each - N
+
+Which Big-O category does this code use?
+For loop N times
+	For loop N times
+		Do N^3 work
+	For loop N times
+		For loop N times
+			Do N^2 work
+		For loop N times
+			Do N work here
+Answer: N^5
+
+Linked Lists & Enqueueing
+n.mNext = tail.mNext
+tail.mNext = n
+tail = n
+
+Write Python code for Bubble Sort, Shaker Sort, etc...
+
+Explain the difference between P, NP, and NP-Complete.
+
+Convert the following expression from infix to postfix:
+1 * 2 / (3 + 4 * (5 + 6 - 7) / 8) - 9
+
+Evaluate this postfix expression:
+24-36+387-*/+
+
+Insert these letters into a BST:
+"the quick brown fox"
+
+Delete the "t" and "f" from the BST, in that order, and redraw the tree.

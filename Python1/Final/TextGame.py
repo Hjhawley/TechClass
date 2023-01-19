@@ -117,11 +117,11 @@ def render(world):
     loc = world["player"]["location"]
     for xdict in world["world_map"]:
         if xdict["location"] == loc:
-            about = "============================================= \n" +xdict["about"]+"\n"
+            about = "============================================= \n" + xdict["about"] +"\n"
             for item in xdict["loot"]:
                 if item not in world["player"]["inventory"]:
                     world["player"]["inventory"].append(item)
-            about = about+"============================================="
+            about = about + "============================================="
             return about
 
     return "error"
