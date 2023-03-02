@@ -1,3 +1,20 @@
+print("12")
+
+print(12 + 12)
+
+print("12" + "12")
+
+var = "blue"
+print(var)
+
+myAge = input("How old are you? ")
+print("You are " + str(myAge) + " years old.")
+
+birthYear = input("What year were you born? ")
+birthYear = int(birthYear)
+myAge = 2023 - birthYear
+print("You will turn " + str(myAge) + " years old this year.")
+
 # This is a comment. Python doesn't do anything with it. It's meant for humans to read.
 
 "This is a string. It's an array of characters, like numbers and letters."
