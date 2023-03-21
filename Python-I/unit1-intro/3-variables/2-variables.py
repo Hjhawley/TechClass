@@ -1,9 +1,3 @@
-print("12")
-
-print(12 + 12)
-
-print("12" + "12")
-
 var = "blue"
 print(var)
 
