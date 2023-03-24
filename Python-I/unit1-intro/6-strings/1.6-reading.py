@@ -44,36 +44,40 @@ name = "John"
 age = 25
 print(f"My name is {name} and I am {age} years old.")
 
+
+
 # Additional tricks for formatting strings:
 
-# The newline character, represented by \n, is the equivalent of hitting the enter key.
+# The \n character represents a new line or line break in the output.
+# This will print each word on a new line.
 print("\nI \nlove \nPython")
 
-print("\nThis makes sure the 'name' string is exactly 10 spaces wide.")
+# This prints a string, filling in variable 'name' for %s.
+# Adding the 10 ensures the name is exactly 10 spaces wide.
 name = "Jill"
 print("hello %10s." % (name))
 
-print("\nThis left-pads an integer with zeros.")
+# This prints two integers, left-padded with zeros if necessary to make them
+# two spaces each.
 i = 5
 j = 15
 print("%02d" % (i))
 print("%02d" % (j))
 
-print("\nThis supresses the return until afterwards.")
+# This prints the two integers on the same line without a return.
 i = 5
 j = 15
 print("%02d" % (i), end = "")
 print("%02d" % (j), end = "")
 print()
 
-print("\nThis prints a float that will take 6 spaces, with 2 right of the")
-print("decimal left padded with zeros.")
+# This prints a float with 2 decimal places, left-padded with zeros to make it
+# take up 6 spaces.
 x = 13.12345
 print("%06.2f" % (x))
 
-print("\nThis prints a string left justified, instead of its default, right justified.")
-print("It's in a field 9 wide, and suppresses the return.")
+# This prints a string left justified in a field of 9 characters.
+# It suppresses the return at the end.
 name = "Jill"
 x = name.ljust(9," ")
-
-print (x,end="")
+print(x, end="")
