@@ -1,3 +1,5 @@
+# String Manipulation
+
 # There are many ways to manipulate strings in helpful ways.
 
 # Concatenation - chaining two strings together
@@ -43,8 +45,6 @@ print("My name is {} and I am {} years old.".format(name, age))
 name = "John"
 age = 25
 print(f"My name is {name} and I am {age} years old.")
-
-
 
 # Additional tricks for formatting strings:
 

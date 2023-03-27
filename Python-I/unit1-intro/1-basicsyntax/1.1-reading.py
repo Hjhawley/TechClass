@@ -1,10 +1,28 @@
-# The hash symbol is used to write comments, like this.
-# Comments are ignored by Python. They are only meant for humans.
+# Basic Python Syntax
+
+# In Python, each line of code contains its own separate instructions.
+# These instructions carry out from top to bottom.
+
+# In languages like Java and C++, indentation does not affect the
+# program and is purely for the sake of user readability. However,
+# indentation does matter in Python and later on we'll see some examples.
+
+# <--- Hash symbols are used to write comments.
+# Comments are ignored by the Python interpreter. They are meant for humans.
+# Usually they clarify the purpose of a particular block of code.
+# They can also be used to temporarily disable lines of code for testing purposes.
+
+'''
+Triple quotes like this can also be used to write multi-line comments
+like this.
+'''
+
+# Throughout this course I'll be using comments to explain concepts.
 
 print("Hello, world!")
-# The above line of code should look like the very first program you wrote.
+# The above line of code should look just like the very first program you wrote.
 # The print() function is a built-in Python function that allows you to
-# output data to the console (aka the terminal).
+# output text to the console (aka the terminal).
 
 # Inside the parentheses is the value we want to print; in this case, a
 # string of characters that spell "Hello, world!"

@@ -1,5 +1,7 @@
-# Operators are symbols and keywords that allow you to perform operations on values or variables.
-# There are four categories of operators.
+# Operators
+
+# Operators are symbols and keywords that allow you to perform operations on
+# values or variables.
 
 # 1. Arithmetic Operators
 # Arithmetic operators are used to perform mathematical operations on values.
@@ -15,6 +17,7 @@ print(x ** y) # Exponentiation: Raises x to the power of y.
 
 # 2. Comparison Operators
 # Comparison operators are used to compare values and return a Boolean value.
+# Also called 'relational operators'.
 # Examples:
 x = 5
 y = 10
@@ -26,17 +29,18 @@ print(x >= y) # Greater than or equal to: Returns True if x is greater than or e
 print(x <= y) # Less than or equal to: Returns True if x is less than or equal to y, otherwise False.
 
 # 3. Logical Operators
-# Logical operators are used to combine multiple conditions and return a Boolean value.
+# Logical operators are used to combine multiple conditions and return a
+# Boolean value.
 # Examples:
 x = 5
 y = 10
 z = 15
 # And operator: Returns True if both conditions are True.
-print(x < y and y < z) # True
+print(x < y and y < z) # Should return True
 # Or operator: Returns True if at least one condition is True.
-print(x > y or y < z) # True
+print(x > y or y < z) # Should return True
 # Not operator: Inverts the result of a condition.
-print(not x > y) # True
+print(not x > y) # Should return True
 
 # 4. Assignment Operators
 # Assignment operators are used to assign values to variables.

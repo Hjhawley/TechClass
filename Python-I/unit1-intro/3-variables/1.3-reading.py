@@ -1,5 +1,7 @@
-# A variable is a user-defined container associated with a value. When you declare
-# a variable, you give it a name (or label) and assign a value to it.
+# Variables
+
+# A variable is a user-defined container of data. When you declare
+# a variable, you give it a name and assign a value to it.
 # Variables can be changed or manipulated throughout the program.
 # Variables can be of any data type.
 # To declare a variable, you assign a value to a name using the = symbol.
@@ -15,8 +17,9 @@ print(y) # This will output the value of y, which is "Hello, world!"
 # We can also reassign the values of variables by simply assigning a new
 # value to their names.
 
-# Python code executes from top-to-bottom. It carries out instructions line-by-line.
-# So we can declare a variable, do something with it, and then reassign it later.
+# Python code executes from top-to-bottom. It carries out instructions
+# line-by-line. So we can declare a variable, do something with it, and
+# then reassign it later.
 
 x = 10
 y = "Roo"
@@ -32,12 +35,12 @@ c = a + b
 # 3 to b, and the result of the expression a + b (which is 5) to c.
 print(c) # This will output the value of c, which is 5.
 
-# It's important to note that variable names are case-sensitive, meaning that
-# "a" and "A" are two different variables. Variable names must start with a letter
-# or underscore, and can only contain letters, underscores, and numbers.
+# It's important to note that variable names are case-sensitive, meaning
+# that a and A are two different variables. Variable names must start with a
+# letter or underscore, and can only contain letters, underscores, and numbers.
 
-# It's good practice to use descriptive variable names that reflect the purpose of
-# the data they are storing. This makes your code easier to read and understand.
-# For example, instead of using a variable name like "x", you could use something
-# more descriptive like "num_apples" if the variable is storing the number of
-# apples in a basket.
+# It's good practice to use descriptive variable names that reflect the
+# purpose of the data they are storing. This makes your code easier to read
+# and understand. For example, instead of using a variable name like "x",
+# you could use something more descriptive like "num_apples" if the
+# variable is storing the number of apples in a basket.

@@ -1,3 +1,5 @@
+# Basic Data Types
+
 # A data type is a classification of data that tells the computer
 # how to interpret and use it. It gives context to the data.
 # In Python, there are several built-in data types.
@@ -32,7 +34,7 @@ print(2 > 3) # This will evaluate to False, because 2 is not greater than 3.
 
 # You can check something's data type by using the type() function.
 
-print(type(3))
+print(type(3)) # Instead of printing 3, this prints the TYPE of 3 which is an int.
 print(type(1.1))
 print(type("Yellow"))
 print(type(10 > 5))
