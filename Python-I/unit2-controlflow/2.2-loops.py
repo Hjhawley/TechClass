@@ -35,37 +35,40 @@ for i in range(10, 20, 2):
     # This will print every even number between 10 and 20, excluding 20.
 
 # While Loops
-# Used to execute a block of code repeatedly, as long as a certain condition is true.
+# Used to execute a block of code repeatedly, as long as a certain
+# condition is true.
 # Example:
 i = 1
 while i < 6:
     print(i)
     i += 1
 
-'''
 # Loop Control Statements
-# Loop control statements change the execution from its normal sequence. Python has three loop control statements:
-# 'break', 'continue', and 'pass'.
+# Used to change the execution from its normal sequence. Python has three
+# loop control statements: 'break', 'continue', and 'pass'.
 
-# - 'break' statement: Terminates the loop and moves on to the next statement.
-# Example:
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    if fruit == "banana":
+# break: Terminates the loop.
+animals = ["sheep", "pig", "cow"]
+for animal in animals:
+    if animal == "pig":
         break
-    print(fruit)
+    print(animal)
+    # This will print 'sheep' and then break out of the loop once it reaches 'pig'.
 
-# - 'continue' statement: Skips the current iteration of the loop and moves on to the next iteration.
+# continue: Skips the current iteration of the loop and moves on to the next.
 # Example:
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    if fruit == "banana":
+trees = ["oak", "birch", "spruce"]
+for tree in trees:
+    if tree == "birch":
         continue
-    print(fruit)
+    print(tree)
+    # This will print 'oak', skip 'birch', and print 'spruce'.
 
-# - 'pass' statement: Used when a statement is required syntactically but you do not want any command or code to execute.
+# pass: Used when you do not want any command or code to execute.
 # Example:
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    pass # TODO: Implement this loop
-'''
+metals = ["gold", "iron", "copper"]
+for metal in metals:
+    pass
+    # Nothing will happen. 'pass' is sometimes used as a placeholder when
+    # a statement is required for the rest of the code to execute.
+    # Without the pass statement, Python would raise a SyntaxError.

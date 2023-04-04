@@ -17,22 +17,22 @@ else:
 
 # We can nest "if" statements within other "if" statements.
 if age >= 16:
-    if age >= 18:
-        print("You can legally drive and vote.")
+    if age >= 21:
+        print("You can legally rent a car.")
     else:
-        print("You can legally drive but can't vote.")
+        print("You can legally drive but can't rent a car.")
 else:
-    print("You are not old enough to drive or vote.")
+    print("You are not old enough to drive.")
 
 # We can include multiple conditional statements. The "elif" keyword stands
 # for "else if" and is essentially the same as running another if statement.
 x = int(input("Give me an integer. "))
 if x > 0:
-    print("That number is positive.")
+    print("That integer is positive.")
 elif x == 0:
-    print("That number is zero.")
+    print("That integer is zero.")
 else:
-    print("That number is negative.")
+    print("That integer is negative.")
 # First we check if the variable is positive. If it's not, we check if it's
 # exactly zero. Finally, if neither of those are true, we conclude that it
 # must be negative.
