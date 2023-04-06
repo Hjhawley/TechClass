@@ -55,6 +55,13 @@ for animal in animals:
     print(animal)
     # This will print 'sheep' and then break out of the loop once it reaches 'pig'.
 
+# Another example of a break statement in action:
+numbers = [1, 3, 5, 4, 7, 9, 10, 11]
+for num in numbers:
+    if num % 2 == 0:
+        print("The first even number is", num)
+        break
+
 # continue: Skips the current iteration of the loop and moves on to the next.
 # Example:
 trees = ["oak", "birch", "spruce"]

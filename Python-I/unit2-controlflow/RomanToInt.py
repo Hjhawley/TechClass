@@ -1,4 +1,4 @@
-# Convert Roman numerals to integers
+# Converts Roman numerals to integers
 
 def romanToInt(s):
         romanNum = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}

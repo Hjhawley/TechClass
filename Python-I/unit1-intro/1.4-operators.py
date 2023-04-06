@@ -27,6 +27,9 @@ print(x > y) # Greater than: Returns True if x is greater than y, otherwise Fals
 print(x < y) # Less than: Returns True if x is less than y, otherwise False.
 print(x >= y) # Greater than or equal to: Returns True if x is greater than or equal to y, otherwise False.
 print(x <= y) # Less than or equal to: Returns True if x is less than or equal to y, otherwise False.
+# When comparing strings, Python compares the characters' ASCII values.
+# Essentially this means alphabetical order, with earlier letters being "smaller".
+print("Apple" < "Zebra") # This will return True.
 
 # 3. Logical Operators
 # Logical operators are used to combine multiple conditions and return a
