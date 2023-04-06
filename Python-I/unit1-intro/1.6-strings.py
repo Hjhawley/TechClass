@@ -81,3 +81,21 @@ print("%06.2f" % (x))
 name = "Jill"
 x = name.ljust(9," ")
 print(x, end="")
+print("Still on the same line.")
+
+# Some helpful String methods
+# upper() - Converts a string into upper case.
+name = "roo"
+name = name.upper()
+print(name)
+
+# strip() - Returns a string with the whitespace trimmed off.
+game = "Minecraft     "
+print(game, "is fun.")
+game = game.strip()
+print(game, "is fun.")
+
+# count() - Returns the number of times a specified value occurs in a string.
+sentence = "The quick brown fox jumps over the lazy dog."
+e_count = sentence.count("e")
+print(e_count)

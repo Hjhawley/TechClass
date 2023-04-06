@@ -1,11 +1,12 @@
 When writing code in Python and other programming languages, we need to
 give names to different things like variables, functions, and classes.
-Two popular naming conventions are camelCase and snake_case.
+Popular naming conventions include camelCase and snake_case.
 
 camelCase is a convention where each word in a name starts with a capital
 letter except for the first word, which starts with a lowercase letter.
 For example, firstName, totalAmount, and numberOfYears are all written in
-camelCase.
+camelCase. PascalCase is a similar convention that also capitalizes the
+first word LikeThis.
 
 snake_case is where words are separated by underscores and all letters are
 lowercase. For example, first_name, total_amount, and number_of_years are
@@ -15,4 +16,6 @@ naming variables, functions, and classes.
 When it comes to choosing a naming convention, it's mostly up to personal
 preference and the style guide being used. However, it's important to keep
 the naming conventions consistent within a project or organization to make
-sure the code is easy to read and maintain.
+sure the code is easy to read and maintain. Personally I like to use 
+camelCase for functions, snake_case for variables, and PascalCase for classes.
+This makes it easier to tell at a glance what something is.
