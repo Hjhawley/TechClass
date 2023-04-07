@@ -1,11 +1,3 @@
-# Data Structures
-
-# A data structure is a way of organizing and storing data in a program so that it
-# can be accessed and used efficiently. It refers to a collection of data elements
-# and the relationships among them, along with the functions or operations that can
-# be applied to the data. There are many types, such as arrays (called "lists" in
-# Python) and maps (called "dictionaries" in Python).
-
 # Lists
 
 # Lists are a type of data structure in Python used to store a collection of items.

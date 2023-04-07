@@ -1,3 +1,5 @@
+Naming Conventions
+
 When writing code in Python and other programming languages, we need to
 give names to different things like variables, functions, and classes.
 Popular naming conventions include camelCase and snake_case.
