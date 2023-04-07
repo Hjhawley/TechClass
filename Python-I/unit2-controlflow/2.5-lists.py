@@ -68,3 +68,5 @@ print(slice3)
 text = "Hello, world!"
 slice4 = text[7:12] # gets "world"
 print(slice4)
+
+# TODO: explain list comprehension

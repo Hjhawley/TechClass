@@ -1,6 +1,6 @@
 # Dictionaries
 
-# Dictionaries are a type of data structure that allow you to store a collection of key-value pairs.
+# Dictionaries are a type of data structure that store a collection of key-value pairs.
 # The keys are typically strings or numbers, and the values can be any type of Python object.
 # Dictionaries are also sometimes called "maps", "hash maps", or "associative arrays".
 
@@ -8,7 +8,7 @@
 # You can create an empty dictionary like this:
 empty_dict = {}
 
-# Or you can create a dictionary with some initial key-value pairs:
+# Or you can initialize a dictionary with key-value pairs:
 fruit_colors = {'apple': 'red', 'banana': 'yellow', 'grape': 'purple'}
 
 # Accessing values in a dictionary
@@ -29,8 +29,8 @@ print(fruit_colors['apple']) # should now print 'green'
 
 # Adding new key-value pairs
 # You can add a new key-value pair to a dictionary like this:
-fruit_colors['orange'] = 'orange'
-print(fruit_colors['orange']) # should print 'orange'
+fruit_colors['blueberry'] = 'blue'
+print(fruit_colors['blueberry']) # should print 'blue'
 
 # Removing key-value pairs
 # You can remove a key-value pair from a dictionary using the del statement:
