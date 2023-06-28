@@ -18,20 +18,21 @@ with open('example.txt', 'r') as f:
 
 # 'f.read()' reads the entire contents of the file and returns it as a string.
 
-# If 'example.txt' does not exist in the working directory, Python will raise a
+# If 'example.txt' does not exist in the current working directory, Python will raise a
 # FileNotFoundError. This means that 'example.txt' needs to be in the same directory
-# as this file, and you'll also have to navigate to the directory from your terminal
-# if you're not already there. You can do this using the 'cd' command.
+# as this Python file, and you'll have to navigate to this directory from your terminal
+# if you're not already there. You can do this using the 'cd' (change directory) command.
 
-# Alternatively, you can use an absolute path, which might look like this:
-# with open('C:\Users\username\GitHub\TechClass\Python-I\unit3-advanced\example.txt', 'r') as f:
+# Alternatively, you can use an absolute path to specify the exact location of the file,
+# which might look something like this if you're using Windows:
+# with open('C:\\Users\\username\\GitHub\\TechClass\\Python-I\\unit3-advanced\\example.txt', 'r') as f:
 
-# To get a file's relative path, right click on it and choose "copy as path".
+# Note the double backslashes (\\) used in the path string. In Python strings, the backslash is an escape character,
+# so to represent a single backslash, you need to use two backslashes.
 
 # Writing to a File
 
-# Now let's write some text to a new file. To do this, we open a file in 
-# write mode ('w'):
+# Now let's write some text to a new file. To do this, we open a file in write mode ('w'):
 
 with open('output.txt', 'w') as f:
     f.write("Hello, world!")
