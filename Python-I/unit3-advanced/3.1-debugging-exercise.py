@@ -1,4 +1,4 @@
-# Let's debug a piece of code:
+# Let's debug this piece of code:
 
 def calculate_total(items):
     total = 0
