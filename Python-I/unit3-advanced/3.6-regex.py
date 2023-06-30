@@ -13,6 +13,7 @@ import re
 
 # The 'findall' function returns a list containing all non-overlapping matches:
 print(re.findall("a", "Hello, my name is Ana."))  # prints ['a', 'a']
+# Note that it only counts lowercase 'a's and not the capital 'A'.
 
 # The 'search' function searches the string for a match, and returns a Match object
 # if there is a match. If there is more than one match, only the first occurrence 
@@ -20,8 +21,8 @@ print(re.findall("a", "Hello, my name is Ana."))  # prints ['a', 'a']
 match = re.search("a", "Hello, my name is Ana.")
 print(match)  # prints <re.Match object; span=(11, 12), match='a'>
 
-# The 'sub' function replaces all the occurrences of the match with the text of your choice:
-print(re.sub("a", "X", "Hello, my name is Ana."))  # prints 'Hello, my nXme is XnX.'
+# The 'sub' function replaces all occurrences of the match with the text of your choice:
+print(re.sub("a", "X", "Hello, my name is Ana."))  # prints 'Hello, my nXme is AnX.'
 
 # We can use metacharacters, like [a-z] or [0-9], to find specific types of patterns:
 # The following line prints all lowercase letters in the string

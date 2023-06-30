@@ -28,6 +28,15 @@ print(sqrt(16))  # prints "4.0"
 # and variables from the 'math' module won't be available unless they're
 # also explicitly imported.
 
+# Python has a built-in module named 'random' that allows us to generate
+# random numbers. The 'randint' function from the 'random' module is used
+# to generate a random integer number within a specified range.
+import random
+
+# This will print a random integer number between 1 and 10.
+print(random.randint(1, 10))  
+
+
 # Third-party Libraries
 # In addition to the standard library, there are thousands of third-party
 # libraries that have been created by the Python community. These are

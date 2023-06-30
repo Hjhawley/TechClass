@@ -209,7 +209,8 @@ def update(world, command):
             if xdict["location"] == loc:
                 world["player"]["location"] = xdict["neighbors"][3]
     elif command == "MAP":
-        print(" _______\n"
+        print(" _______ \n"
+              "|       |\n"
               "| x G E |\n"
               "| T S D |\n"
               "| K M x |\n"
