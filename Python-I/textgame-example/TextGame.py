@@ -117,7 +117,7 @@ def render(world):
     loc = world["player"]["location"]
     for xdict in world["world_map"]:
         if xdict["location"] == loc:
-            about = "============================================= \n" + xdict["about"] +"\n"
+            about = "============================================= \n" + xdict["about"] + "\n"
             for item in xdict["loot"]:
                 if item not in world["player"]["inventory"]:
                     world["player"]["inventory"].append(item)
@@ -281,11 +281,11 @@ def choose(options, inventory):
     '''
     print("COMMANDS:")
     for i in range(len(options)):
-        print(" - "+options[i])
+        print(" - " + options[i])
     if inventory != []:
         print("INVENTORY:")
         for i in range(len(inventory)):
-            print(" - "+inventory[i])
+            print(" - " + inventory[i])
     while True:
         command = input("What do you want to do? ")
         command = command.upper()
