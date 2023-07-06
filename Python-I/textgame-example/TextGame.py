@@ -3,9 +3,9 @@ import random
 # Core game functions
 
 def exposition():
-    
-    # The message to be displayed at the start of the game.
-    
+
+    # Returns (does not print) a message to be displayed at the start of the game.
+   
     expo_text = "You find yourself lost in a dimly lit tomb.\n" \
                 "Its builders are unknown to the modern world.\n" \
                 "Your gut tells you there's treasure nearby.\n"
@@ -14,7 +14,7 @@ def exposition():
 def create_world():
 
     # Creates and returns a world object in its initial state.
-        
+
     world = {"status"    :
                 "playing",
             "player"    : {
@@ -73,16 +73,9 @@ def create_world():
     return world
 
 def render(world):
-    '''
-    Consumes a world and produces a string that will describe the current state
-    of the world. Does not print.
-    
-    Args:
-        world (World): The current world to describe.
-    
-    Returns:
-        str: A textual description of the world.
-    '''
+
+    # Returns (does not print) a string describing the world to the player.
+
     loc = world["player"]["location"]
     for room in world["world_map"]:
         if room["location"] == loc:
@@ -96,16 +89,9 @@ def render(world):
     return "error"
 
 def get_options(world):
-    '''
-    Consumes a world and produces a list of strings representing the options
-    that are available to be chosen given this state.
-    
-    Args:
-        world (World): The current world to get options for.
-    
-    Returns:
-        list[str]: The list of commands that the user can choose from.
-    '''
+
+    # Returns (does not print) a list of valid options available to the player.
+
     loc = world["player"]["location"]
     options = []
     
@@ -129,17 +115,9 @@ def get_options(world):
     return options
 
 def update(world, command):
-    '''
-    Consumes a world and a command and updates the world according to the
-    command, also producing a message about the update that occurred. This
-    function should modify the world given, not produce a new one.
-    
-    Args:
-        world (World): The current world to modify.
-    
-    Returns:
-        str: A message describing the change that occurred in the world.
-    '''
+
+    # Modifies the game world object and returns it.
+
     loc = world["player"]["location"]
     if command == "QUIT":
         world["status"] = "quitting"
@@ -213,15 +191,9 @@ def update(world, command):
     return ""
 
 def render_ending(world):
-    '''
-    Create the message to be displayed at the end of your game.
-    
-    Args:
-        world (World): The final world state to use in describing the ending.
-    
-    Returns:
-        str: The ending text of your game to be displayed.
-    '''
+
+    # Returns (does not print) an ending message based on the game's status.
+
     if world["status"] == "win":
         if ("GOLD") in world["player"]["inventory"]:
             return "You see an exit! \nYou made it out with the gold! You're gonna be rich. \n \nThank you for playing."
@@ -235,20 +207,9 @@ def render_ending(world):
         return "Play again soon."
 
 def choose(options, inventory):
-    '''
-    Consumes a list of commands, prints them for the user, takes in user input
-    for the command that the user wants (prompting repeatedly until a valid
-    command is chosen), and then returns the command that was chosen.
-    
-    Note:
-        Use your answer to Programming Problem #42.3
-    
-    Args:
-        options (list[str]): The potential commands to select from.
-    
-    Returns:
-        str: The command that was selected by the user.
-    '''
+
+    # Prints valid commands and returns the player's choice.
+
     print("COMMANDS:")
     for i in range(len(options)):
         print(" - " + options[i])
@@ -282,8 +243,7 @@ def choose(options, inventory):
 
 def main():
 
-    # Run your game using the Text Adventure console engine.
-    # Consumes and produces nothing, but prints and indirectly takes user input.
+    # Main loop of the game. Utilizes all other functions.
 
     print(exposition())
     world = create_world()
@@ -298,5 +258,4 @@ def main():
     print()
     main()
 
-if __name__ == "__main__":
-    main()
+main()
