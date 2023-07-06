@@ -1,32 +1,5 @@
 import random
 
-# Record definitions
-
-'''
-Records:
-    World:
-        status (str): Whether or not the game is "playing", "win",
-                      "quitting", or "lose". Initially "playing".
-        world_map (dict[str: Location]): The lookup dictionary matching 
-                                         location names to their
-                                         information.
-        player (Player): The player character's information.
-
-    Player:
-        alive (boolean): Whether the player is alive or dead.
-        location (str): The name of the player's current location.
-        inventory (list[str]): The player's collection of items.
-                               Initially empty.
-
-    Location:
-        about (str): A sentence that describes what this location 
-                     looks like.
-        neighbors (list[str]): A list of the names of other places 
-                               that you can reach from this 
-                               location.
-        loot (str): The tools or loot available at this location (if any.)
-'''
-
 # Core game functions
 
 def exposition():
@@ -35,15 +8,12 @@ def exposition():
     
     expo_text = "You find yourself lost in a dimly lit tomb.\n" \
                 "Its builders are unknown to the modern world.\n" \
-                "Your gut tells you there's treasure nearby."
+                "Your gut tells you there's treasure nearby.\n"
     return expo_text
 
 def create_world():
 
-    # Creates a new version of the world in its initial state.
-    
-    # Returns:
-        # World: The initial state of the world
+    # Creates and returns a world object in its initial state.
         
     world = {"status"    :
                 "playing",
@@ -65,8 +35,7 @@ def create_world():
                  "loot"         : ["GOLD"]},
 
                 {"location"     : "rm_map",
-                 "about"        : "You find a dusty old map. This should help. \n"
-                                  "(Enter \"MAP\" to check it.)",
+                 "about"        : "You find a dusty old map. This should help.",
                  "neighbors"    : ["rm_start", "", "death2", "rm_key"],
                  "loot"         : ["MAP"]},
 
@@ -115,13 +84,13 @@ def render(world):
         str: A textual description of the world.
     '''
     loc = world["player"]["location"]
-    for xdict in world["world_map"]:
-        if xdict["location"] == loc:
-            about = "============================================= \n" + xdict["about"] + "\n"
-            for item in xdict["loot"]:
+    for room in world["world_map"]:
+        if room["location"] == loc:
+            about = "============================================= \n" + room["about"] + "\n"
+            for item in room["loot"]:
                 if item not in world["player"]["inventory"]:
                     world["player"]["inventory"].append(item)
-            about = about + "============================================="
+            about += "============================================="
             return about
 
     return "error"
@@ -143,9 +112,9 @@ def get_options(world):
     if loc == "rm_dark":
         options = ["TURN BACK", "RISK IT"]
     else:
-        for xdict in world["world_map"]:
-            if xdict["location"]  == loc:
-                neighbors_pos = xdict["neighbors"]
+        for room in world["world_map"]:
+            if room["location"]  == loc:
+                neighbors_pos = room["neighbors"]
         if neighbors_pos[0] != "":
             options.append("NORTH")
         if neighbors_pos[1] != "":
@@ -174,40 +143,39 @@ def update(world, command):
     loc = world["player"]["location"]
     if command == "QUIT":
         world["status"] = "quitting"
-        return("Sorry to see you go!")
     elif world["player"]["location"] == "rm_start" and command == "NORTH":
         if "KEY" not in world["player"]["inventory"]:
             print("\nThe door seems to be locked. It won't budge.")
         else:
             print("\nYou try the key. It works!")
-            for xdict in world["world_map"]:
-                if xdict["location"]  == loc:
-                    world["player"]["location"] = xdict["neighbors"][0]
+            for room in world["world_map"]:
+                if room["location"]  == loc:
+                    world["player"]["location"] = room["neighbors"][0]
     elif world["player"]["location"] == "rm_start" and command == "EAST":
         if "TORCH" not in world["player"]["inventory"]:
-            for xdict in world["world_map"]:
-                if xdict["location"]  == loc:
+            for room in world["world_map"]:
+                if room["location"]  == loc:
                     world["player"]["location"] = "rm_dark"
         else:
-            for xdict in world["world_map"]:
-                if xdict["location"]  == loc:
+            for room in world["world_map"]:
+                if room["location"]  == loc:
                     world["player"]["location"] = "rm_lit"
     elif command == "NORTH":
-        for xdict in world["world_map"]:
-            if xdict["location"]  == loc:
-                world["player"]["location"] = xdict["neighbors"][0]
+        for room in world["world_map"]:
+            if room["location"]  == loc:
+                world["player"]["location"] = room["neighbors"][0]
     elif command == "SOUTH":
-        for xdict in world["world_map"]:
-            if xdict["location"]  == loc:
-                world["player"]["location"] = xdict["neighbors"][1]
+        for room in world["world_map"]:
+            if room["location"]  == loc:
+                world["player"]["location"] = room["neighbors"][1]
     elif command == "EAST":
-        for xdict in world["world_map"]:
-            if xdict["location"]  == loc:
-                world["player"]["location"] = xdict["neighbors"][2]
+        for room in world["world_map"]:
+            if room["location"]  == loc:
+                world["player"]["location"] = room["neighbors"][2]
     elif command == "WEST":
-        for xdict in world["world_map"]:
-            if xdict["location"] == loc:
-                world["player"]["location"] = xdict["neighbors"][3]
+        for room in world["world_map"]:
+            if room["location"] == loc:
+                world["player"]["location"] = room["neighbors"][3]
     elif command == "MAP":
         print(" _______ \n"
               "|       |\n"
@@ -220,18 +188,18 @@ def update(world, command):
     elif command == "RISK IT":
         fumble = random.randrange(0, 3)
         if fumble == 0:
-            for xdict in world["world_map"]:
-                if xdict["location"]  == loc:
+            for room in world["world_map"]:
+                if room["location"]  == loc:
                     world["player"]["location"] = "death2"
                     print("\nWhat could go wrong?")
         elif fumble == 1:
-            for xdict in world["world_map"]:
-                if xdict["location"]  == loc:
+            for room in world["world_map"]:
+                if room["location"]  == loc:
                     world["player"]["location"] = "rm_start"
                     print("\nYou blindly fumble around and end up right where you started.")
         elif fumble == 2:
-            for xdict in world["world_map"]:
-                if xdict["location"]  == loc:
+            for room in world["world_map"]:
+                if room["location"]  == loc:
                     world["player"]["location"] = "rm_exit"
                     print("\nHere goes nothing!")
     if world["player"]["location"] == "death1":
@@ -256,9 +224,11 @@ def render_ending(world):
     '''
     if world["status"] == "win":
         if ("GOLD") in world["player"]["inventory"]:
-            return "You see an exit! \nYou made it out with the gold! You're gonna be rich. \nThank you for playing."
+            return "You see an exit! \nYou made it out with the gold! You're gonna be rich. \n \nThank you for playing."
         else:
             return "You see an exit! \nYou make it out alive! But without any treasure..."
+    elif world["status"] == "quitting":
+        return("Sorry to see you go!")
     elif world["status"] == "lose":
         return "Try again!"
     else:
@@ -287,6 +257,7 @@ def choose(options, inventory):
         for i in range(len(inventory)):
             print(" - " + inventory[i])
     while True:
+        print()
         command = input("What do you want to do? ")
         command = command.upper()
         if command == "N":
@@ -297,10 +268,16 @@ def choose(options, inventory):
             command = "EAST"
         if command == "W":
             command = "WEST"
+        if command == "Q":
+            command = "QUIT"
+        if command == "M":
+            command = "MAP"
         if command in options:
             break
-        print("  Invalid command.")
-
+        else:
+            print()
+            print("Invalid command.")
+            print()
     return command
 
 def main():
