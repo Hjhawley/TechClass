@@ -86,7 +86,7 @@ def render(world):
             about += "============================================="
             return about
 
-    return "error"
+    return "Error rendering world"
 
 def get_options(world):
 
@@ -99,7 +99,7 @@ def get_options(world):
         options = ["TURN BACK", "RISK IT"]
     else:
         for room in world["world_map"]:
-            if room["location"]  == loc:
+            if room["location"] == loc:
                 neighbors_pos = room["neighbors"]
         if neighbors_pos[0] != "":
             options.append("NORTH")
@@ -200,7 +200,7 @@ def render_ending(world):
         else:
             return "You see an exit! \nYou make it out alive! But without any treasure..."
     elif world["status"] == "quitting":
-        return("Sorry to see you go!")
+        return("Sorry to see you go. Play again soon!")
     elif world["status"] == "lose":
         return "Try again!"
     else:
@@ -254,6 +254,8 @@ def main():
         command = choose(options, inventory)
         print(update(world, command))
     print(render_ending(world))
+    if world["status"] == "quitting":
+        return
     input("Press any key to continue.")
     print()
     main()
