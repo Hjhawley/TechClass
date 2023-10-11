@@ -1,0 +1,78 @@
+<html><head></head><body><h1>String to integer</h1>
+
+<p>Write a function called <code>stoi</code> to convert a string containing a base
+10 number to an integer value.</p>
+
+<pre><code>stoi(char *string) -&gt; n
+</code></pre>
+
+<p><code>stoi</code> is given the address of a string in memory containing a text
+representation of an integer value. Here is the basic algorithm for
+doing this:</p>
+
+<pre><code>n = 0
+i = 0
+loop:
+    // note: string is an array of 1-byte values
+    c = string[i]
+    if c &lt; &#39;0&#39; or c &gt; &#39;9&#39;:
+        break
+    n = n * 10 + (c - &#39;0&#39;)
+    i += 1
+return n
+</code></pre>
+
+<p>Note that you do not know in advance how many characters make up the
+number. As soon as you read something that is not a digit, you
+should assume you have reached the end of the input.</p>
+
+<p>In addition to the outline given above, you should accept an
+optional <code>-</code> (minus sign) at the beginning of the input, and return
+a negative number instead of a positive number. Write your code to
+work with non-negative numbers first, then go back and modify it to
+do the following:</p>
+
+<ul>
+<li>Before the loop begins, check if the first character is a &#39;-&#39;.
+If it is, start at i=1 instead of i=0 and remember that the
+result should be negative (use a spare register to store this
+info).</li>
+<li>Read the digits as normal.</li>
+<li>After the loop ends, check if the result should be negative. If
+so, use the &#39;neg&#39; instruction to flip the sign of the result.</li>
+</ul>
+
+<p>For example, if <code>stoi</code> is called with 0x1230 as the value of the
+buffer pointer, and memory contains the following:</p>
+
+<ul>
+<li>0x1230: &#39;3&#39; (ASCII code 51)</li>
+<li>0x1231: &#39;8&#39; (ASCII code 56)</li>
+<li>0x1232: &#39;0&#39; (ASCII code 48)</li>
+<li>0x1233: &#39;1&#39; (ASCII code 49)</li>
+<li>0x1234: &#39;2&#39; (ASCII code 50)</li>
+<li>0x1235: &#39; &#39; (ASCII code 32)</li>
+</ul>
+
+<p>Your function should return the number 38012.</p>
+
+<h2>Hints</h2>
+
+<p>To negate a value, you can just subtract it from zero, or you can
+use the <code>neg</code> pseudo-instruction.</p>
+
+<p>To multiply a value by 10, use the <code>mul</code> instruction. There is no
+<code>muli</code> instruction so you must load a 10 into a register first to
+perform the multiplication.</p>
+
+<p>Start by writing just enough code to convert a single digit, and
+test it with suitable inputs (&#34;5&#34;, &#34;0&#34;, &#34;1&#34;, etc.).</p>
+
+<p>Then add the loop structure and try it with two digit numbers, three
+digit numbers, etc.</p>
+
+<p>Then add in support for negative numbers at the end.</p>
+
+<p>Each time you add more cases to your code, run <code>make</code> to run tests
+that exercises the new code you have written.</p>
+</body></html>

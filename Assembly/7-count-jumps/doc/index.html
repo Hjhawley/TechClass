@@ -1,0 +1,56 @@
+<html><head></head><body><p>Write a RISC-V function with the following prototype:</p>
+
+<pre><code>int count_jumps(int *array, int size)
+</code></pre>
+
+<p><code>array</code> is the address of an array of 64-bit integers, and <code>size</code> is
+the number of entries in the array (so the total memory used by the
+array is <code>8 × size</code>), and all <code>int</code> values mean 64-bit integers.</p>
+
+<p>The function should do the following:</p>
+
+<ol>
+<li><p>Start with an array index set to the last element in the array
+(it will have at least one element). Since array index values
+are zero based, this will be size-1.</p></li>
+
+<li><p>Load the element from the current array index, and add the value
+loaded to the current index, i.e., <code>index = index + array[index]</code></p></li>
+
+<li><p>If the index is outside the bounds of the array, stop.
+Otherwise, go back to step 2.</p></li>
+
+<li><p>Return the total number of array indices visited, i.e., the total
+number of values loaded from memory.</p></li>
+</ol>
+
+<p>For example, if you were given the array with these 5 numbers:</p>
+
+<pre><code>0, 0, 1, 2, -2
+</code></pre>
+
+<ul>
+<li>You would start with index 4 (the last valid index in the
+array).</li>
+<li>You would load the value -2 from the array, and adding that to
+the index would give a new index of 2.</li>
+<li>The element with index 2 is 1, so you would add that to the
+index, yielding 3.</li>
+<li>The element at index 3 is 2, so you would add 2 to the index and
+get 5.</li>
+<li>Index 5 is past the end of the array, so you would stop.</li>
+</ul>
+
+<p>Since you loaded a total of 3 values (-2, 1, and 2), you would
+return 3.</p>
+
+<p>Note that you should stop when the index is off either end of the
+array. An index less than zero or an index greater or equal to size
+should end the loop.</p>
+
+<p>You should start by writing clear pseudo-code for this function. Try
+your pseudo-code out with the example above (and possibly some of
+the test cases from <code>start.s</code>) before writing it in assembly.</p>
+
+<p>Write your code in the file <code>count_jumps.s</code>.</p>
+</body></html>

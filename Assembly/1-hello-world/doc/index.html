@@ -1,0 +1,38 @@
+<html><head></head><body><p>The purpose of this assignment is to make sure your build
+environment is set up correctly.</p>
+
+<p>Edit the file hw.s so that it loads the number 42 into register a0
+before returning. This can be accomplished with a single added
+instruction:</p>
+
+<pre><code>li  a0, 42
+</code></pre>
+
+<p>To test the code:</p>
+
+<pre><code>make
+</code></pre>
+
+<p>This does a few things. It builds the project, it runs it, and it
+watches the output and compares it with the expected output. If
+everything is correct it will simply run to completion. If there is
+anything incorrect in the output it will stop and show both what
+your code displayed (the actual output) and what it should have
+displayed (the expected output).</p>
+
+<p>You can also run the run without checking the output:</p>
+
+<pre><code>make run
+</code></pre>
+
+<p>Another option is to run the tests and only report on the results
+(not showing all of the output to the console):</p>
+
+<pre><code>make test
+</code></pre>
+
+<p>When everything is working correctly, submit your code for grading:</p>
+
+<pre><code>grind grade
+</code></pre>
+</body></html>

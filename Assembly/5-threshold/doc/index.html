@@ -1,0 +1,35 @@
+<html><head></head><body><p>Write a RISC-V function to count some of the values in an array.</p>
+
+<p>Your function should implement this interface:</p>
+
+<pre><code>int array_count(int *array, int count, int threshold)
+</code></pre>
+
+<p>(all <code>int</code> values mean 64-bit integers)</p>
+
+<p><code>array</code> is the address of an array of 64-bit integers, and
+<code>count</code> is the number of entries in the array (so the total memory
+used by the array is <code>8 × count</code>).</p>
+
+<p>You should compute and return the sum of the elements in the array
+that are greater or equal to <code>threshold</code>. Ignore values in the array
+that are less than <code>threshold</code>.</p>
+
+<p>Pseudo-code for this function might look something like:</p>
+
+<pre><code>int array_count(int *array, int count, int threshold) {
+    sum = 0
+    for i = 0; i &lt; count; i++ {
+        if array[i] &gt;= threshold {
+            sum += array[i]
+        }
+    }
+    return sum
+}
+</code></pre>
+
+<p>Note that this is a leaf function so there is no need to set up a
+stack frame. You can do everything using scratch registers.</p>
+
+<p>Write your code in the file <code>array_sum.s</code>.</p>
+</body></html>

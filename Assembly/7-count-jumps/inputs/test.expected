@@ -1,0 +1,20 @@
+
+Testing with the array: 1
+Expecting return value of:  1
+Got actual return value of: 1
+
+Testing with the array: -1
+Expecting return value of:  1
+Got actual return value of: 1
+
+Testing with the array: -1, -1, -1
+Expecting return value of:  3
+Got actual return value of: 3
+
+Testing with the array: 0, 2, -3, -1, 2, -1, -5, 0, 0, -4
+Expecting return value of:  7
+Got actual return value of: 7
+
+Testing with the array: 20, 9, 9, 9, 9, 9, 9, 9, 9, 9, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10
+Expecting return value of:  20
+Got actual return value of: 20

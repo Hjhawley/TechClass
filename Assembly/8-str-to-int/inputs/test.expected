@@ -1,0 +1,100 @@
+
+Calling stoi with the string "0"
+Expecting the result: 0
+Actual return value : 0
+
+Calling stoi with the string ""
+Expecting the result: 0
+Actual return value : 0
+
+Calling stoi with the string "notanumber"
+Expecting the result: 0
+Actual return value : 0
+
+Calling stoi with the string " 123"
+Expecting the result: 0
+Actual return value : 0
+
+Calling stoi with the string "1"
+Expecting the result: 1
+Actual return value : 1
+
+Calling stoi with the string "9"
+Expecting the result: 9
+Actual return value : 9
+
+Calling stoi with the string "5"
+Expecting the result: 5
+Actual return value : 5
+
+Calling stoi with the string "34"
+Expecting the result: 34
+Actual return value : 34
+
+Calling stoi with the string "90"
+Expecting the result: 90
+Actual return value : 90
+
+Calling stoi with the string "55"
+Expecting the result: 55
+Actual return value : 55
+
+Calling stoi with the string "01"
+Expecting the result: 1
+Actual return value : 1
+
+Calling stoi with the string "23junk"
+Expecting the result: 23
+Actual return value : 23
+
+Calling stoi with the string "00 123"
+Expecting the result: 0
+Actual return value : 0
+
+Calling stoi with the string "100"
+Expecting the result: 100
+Actual return value : 100
+
+Calling stoi with the string "999"
+Expecting the result: 999
+Actual return value : 999
+
+Calling stoi with the string "123456"
+Expecting the result: 123456
+Actual return value : 123456
+
+Calling stoi with the string "987654321"
+Expecting the result: 987654321
+Actual return value : 987654321
+
+Calling stoi with the string "987654321-0"
+Expecting the result: 987654321
+Actual return value : 987654321
+
+Calling stoi with the string "-100"
+Expecting the result: -100
+Actual return value : -100
+
+Calling stoi with the string "-"
+Expecting the result: 0
+Actual return value : 0
+
+Calling stoi with the string "-999"
+Expecting the result: -999
+Actual return value : -999
+
+Calling stoi with the string "-123456"
+Expecting the result: -123456
+Actual return value : -123456
+
+Calling stoi with the string "-987654321"
+Expecting the result: -987654321
+Actual return value : -987654321
+
+Calling stoi with the string "-987654321-0"
+Expecting the result: -987654321
+Actual return value : -987654321
+
+Calling stoi with the string "--987654321-0"
+Expecting the result: 0
+Actual return value : 0

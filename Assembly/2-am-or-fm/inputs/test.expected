@@ -1,0 +1,42 @@
+Calling am_or_fm with input => 535
+  am_or_fm returned =========> 1
+Calling am_or_fm with input => 536
+  am_or_fm returned =========> 1
+Calling am_or_fm with input => 1000
+  am_or_fm returned =========> 1
+Calling am_or_fm with input => 1604
+  am_or_fm returned =========> 1
+Calling am_or_fm with input => 1605
+  am_or_fm returned =========> 1
+Calling am_or_fm with input => 88
+  am_or_fm returned =========> 2
+Calling am_or_fm with input => 89
+  am_or_fm returned =========> 2
+Calling am_or_fm with input => 98
+  am_or_fm returned =========> 2
+Calling am_or_fm with input => 107
+  am_or_fm returned =========> 2
+Calling am_or_fm with input => 108
+  am_or_fm returned =========> 2
+Calling am_or_fm with input => 0
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => -1
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => -535
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => -88
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => 534
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => 1606
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => 87
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => 109
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => 500
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => 10000
+  am_or_fm returned =========> 0
+Calling am_or_fm with input => 50
+  am_or_fm returned =========> 0

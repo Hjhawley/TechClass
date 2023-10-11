@@ -1,0 +1,68 @@
+<html><head></head><body><p>Write a RISC-V function to find the largest element in an array.</p>
+
+<p>Your function should implement this interface:</p>
+
+<pre><code>int array_max(int *array, int count)
+</code></pre>
+
+<p>(all <code>int</code> values mean 64-bit integers)</p>
+
+<p><code>array</code> is the address of an array of 64-bit integers, and
+<code>count</code> is the number of entries in the array (so the total memory
+used by the array is <code>8 × count</code>).</p>
+
+<p>You may assume that the array contains at least one element. Hint:
+start by assuming the first element is the largest, then scan the
+rest of the array looking for anything bigger.</p>
+
+<p>Note that this is a leaf function so there is no need to set up a
+stack frame. You can do everything using scratch registers.</p>
+
+<p>Write your code in the file <code>array_max.s</code>.</p>
+
+<p>As an example, suppose a region of memory looks like this:</p>
+
+<pre><code>+-----------+-----------+
+| Address   | Value     |
++===========+===========+
+| ...       | ...       |
+| 9376      | 93        |
+| 9384      | -15       |
+| 9392      | -27       |
+| 9400      | 33        |
+| 9408      | 12        |
+| 9416      | 6         |
+| 9424      | 44        |
+| 9432      | 13        |
+| 9440      | 44        |
+| 9448      | 50        |
+| 9456      | 1000      |
+| ...       | ...       |
++-----------+-----------+
+</code></pre>
+
+<p>Say that <code>array_max</code> is called with the parameter <code>array</code> set to
+9384 (the address of the beginning of the array) and <code>count</code> set to
+8 (the number of elements in the array). It should iterate through
+the 8 elements (the values -15 through 44, respectively) and return
+44, since that is the largest element in the array. Note that the
+values at 9376 and 9448 are NOT part of the array.</p>
+
+<p>If you follow the hint given above, you would proceed like this:</p>
+
+<ul>
+<li>Grab element 0 from the array at address 9384, which is -15</li>
+<li>Start scanning the rest of the list:
+
+<ul>
+<li>element 1 is -27, so keep -15 as the largest element so far</li>
+<li>element 2 is 33, which is the new largest element so far</li>
+<li>element 3 is 12, so keep 33 as the largest element so far</li>
+<li>element 4 is 6, so keep 33 as the largest element so far</li>
+<li>element 5 is 44, which is the new largest element so far</li>
+<li>element 6 is 13, so keep 44 as the largest element so far</li>
+<li>element 7 is 44, so keep 44 as the largest element so far</li>
+</ul></li>
+<li>Return 44, which was the largest element found</li>
+</ul>
+</body></html>
