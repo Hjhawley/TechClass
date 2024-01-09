@@ -1,0 +1,41 @@
+/* This applies to all body elements */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgrey;
+}
+
+/* This styles all <h1> elements */
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+/* This styles elements with class="intro" */
+.intro {
+    font-size: 24px;
+    color: navy;
+    text-align: center;
+}
+
+/* This styles the element with id="container" */
+#container {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* This styles all <button> elements */
+button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* This changes the button's style when hovered over */
+button:hover {
+    background-color: orange;
+}
