@@ -233,6 +233,10 @@ def choose(options, inventory):
             command = "QUIT"
         if command == "M":
             command = "MAP"
+        if command == "T":
+            command = "TURN BACK"
+        if command == "R":
+            command = "RISK IT"
         if command in options:
             break
         else:
