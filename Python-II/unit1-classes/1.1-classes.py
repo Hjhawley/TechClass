@@ -25,8 +25,8 @@ class Car:
 # To create an object, you call the class name followed by the data members you want to
 # pass to the __init__ method as parameters.
 
-your_car = Car("Toyota", "Corolla", 2019, "Silver")  # Creating a Car object
-print(your_car.display_info())  # Silver 2019 Toyota Corolla
+your_car = Car("Chevrolet", "Impala", 2015, "Silver")  # Creating a Car object
+print(your_car.display_info())  # Silver 2015 Chevrolet Impala
 
 # Objects can have their attributes updated using methods.
 
