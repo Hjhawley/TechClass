@@ -1,4 +1,3 @@
-# Define a Class
 # Define a class called Book with the following attributes:
 '''
     title
@@ -7,17 +6,14 @@
     genre
 '''
 
-# Initialize Objects
-# Create three different Book objects with different values for their attributes.
-
-# Implement Methods
 # Add methods to the Book class to:
 '''
     display_info: Return a string containing the book's details in a readable format.
     update_year: Update the year_published attribute.
 '''
 
-# Use the Methods
+# Create three different Book objects with different values for their attributes.
+
 # Use the display_info and update_year methods on your Book objects and print the results.
 
 
