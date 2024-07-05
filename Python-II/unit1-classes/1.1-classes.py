@@ -3,7 +3,7 @@
 # A class in Python is a blueprint for creating objects. It defines a set of
 # attributes that characterize any object of the class.
 
-# Defining a Simple Class
+# Defining a simple class
 class Car:
     def __init__(self, brand, model, year, color):
         # The 'self' parameter is a reference to the current instance of the class.
@@ -21,7 +21,7 @@ class Car:
         # Updates the year of the car.
         self.year = new_year
 
-# Creating an Object
+# Creating an object
 # To create an object, you call the class name followed by the data members you want to
 # pass to the __init__ method as parameters.
 
