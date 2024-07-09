@@ -53,10 +53,10 @@ class Fish(Animal):
         return f"{self.name} is swimming in {self.habitat}."
 
 # Creating Objects
-eagle = Bird("Eagle", "bird", 5, True)
-penguin = Bird("Penguin", "bird", 3, False)
-salmon = Fish("Salmon", "fish", 2, "freshwater")
-clownfish = Fish("Clownfish", "fish", 1, "saltwater")
+eagle = Bird("Eagle", "bird", True)
+penguin = Bird("Penguin", "bird", False)
+salmon = Fish("Salmon", "fish", "freshwater")
+clownfish = Fish("Clownfish", "fish", "saltwater")
 
 # Using Methods
 print(eagle.display_info())     # Output: Eagle is a bird and can fly.
@@ -70,3 +70,7 @@ print(salmon.swim())            # Output: Salmon is swimming in freshwater.
 
 print(clownfish.display_info()) # Output: Clownfish is a fish and lives in saltwater.
 print(clownfish.swim())         # Output: Clownfish is swimming in saltwater.
+
+# Inheritance allows you to organize your classes in a hierarchical structure.
+# It also allows you to avoid redundancy by reusing common blocks of code. DRY (Don't Repeat Yourself!)
+# Derived classes help extend the functionality of your base classes and make your code more flexible.
