@@ -72,5 +72,6 @@ print(clownfish.display_info()) # Output: Clownfish is a fish and lives in saltw
 print(clownfish.swim())         # Output: Clownfish is swimming in saltwater.
 
 # Inheritance allows you to organize your classes in a hierarchical structure.
-# It also allows you to avoid redundancy by reusing common blocks of code. DRY (Don't Repeat Yourself!)
-# Derived classes help extend the functionality of your base classes and make your code more flexible.
+# It also allows you to avoid redundancy by reusing common blocks of code.
+# DRY (Don't Repeat Yourself!)
+# Derived classes help extend the functionality of your base classes and make your code flexible.

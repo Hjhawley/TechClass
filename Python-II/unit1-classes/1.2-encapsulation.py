@@ -2,11 +2,11 @@
 
 # Encapsulation is one of the fundamental concepts of OOP.
 # It means keeping data and the methods that work on that data bundled together in one class.
-# This helps protect the data from being modified by accident and keeps the object safe and reliable.
+# This protects the data from being modified by accident and keeps the object reliable.
 
 # Some programming languages like Java and C++ have strict access control keywords like 
 # 'public', 'private', and 'protected' to enforce encapsulation.
-# In Python, we traditionally use underscores (_) to indicate that an attribute is meant to be private.
+# In Python, we use underscores (_) to indicate that an attribute is meant to be private.
 # This is just a convention, not a strict rule enforced by Python.
 # However, using this convention can help remind you and others how to treat the data.
 

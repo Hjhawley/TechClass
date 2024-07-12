@@ -1,11 +1,11 @@
-# Create classes that model real-world objects using inheritance. Initialize objects from these classes 
-# and implement methods to interact with the object attributes.
+# Create classes that model real-world objects using inheritance. Initialize objects from these
+# classes and implement methods to interact with the object attributes.
 
 # Task 1: Define a Base Class
 # Define a base class called `Appliance` with the following attributes:
 # - name (a string)
 # - brand (a string)
-# Add a method `display_info` to the `Appliance` class that returns a string with the appliance's name and brand.
+# Add a method `display_info` to the `Appliance` class that returns the name and brand as a string.
 
 # Task 2: Define Child Classes
 # Define two child classes that inherit from `Appliance`:
@@ -15,7 +15,8 @@
 # - `Refrigerator`
 #   - Additional attribute: `temperature` (an integer)
 #   - Method: `cool_food`, which prints a message about cooling food with the temperature.
-# Make sure that the `display_info` method in each child class includes information about the extra attribute.
+# Make sure that the `display_info` method in each child class includes information about the
+# extra attribute.
 
 # Task 3: Initialize Objects
 # Create objects of both `WashingMachine` and `Refrigerator` classes with appropriate values.
@@ -24,7 +25,8 @@
 # fridge = Refrigerator(name="CoolKeeper", brand="CoolBrand", temperature=4)
 
 # Task 4: Use the Methods
-# Use the `display_info`, `wash_clothes`, and `cool_food` methods on your objects and print the results.
+# Use the `display_info`, `wash_clothes`, and `cool_food` methods on your objects 
+# and print the results.
 # Example:
 # print(washer.display_info())
 # washer.wash_clothes()
