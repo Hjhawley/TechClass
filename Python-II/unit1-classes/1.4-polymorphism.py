@@ -13,9 +13,9 @@ class Animal:
 
     def speak(self):
         # This method is intended to be overridden in derived classes.
-        raise NotImplementedError("Subclasses must implement this method")
+        raise NotImplementedError("Child class must implement this method.")
 
-# Derived classes
+# Child classes
 class Dog(Animal):
     def speak(self):
         return f"{self.name} says 'Woof'"
@@ -40,7 +40,9 @@ for animal in animals:
     print(animal.speak())
 
 # Output:
-#...
+# Rascal says 'Woof'
+# Cookie says 'Meow'
+# Petey says 'Chirp'
 
 # Notice how polymorphism allows us to call the 'speak' method on each object,
 # and each object responds appropriately according to its own implementation of the method.
