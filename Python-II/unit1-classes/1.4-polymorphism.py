@@ -1,15 +1,17 @@
 # Polymorphism
 
-# Polymorphism is a feature of OOP that allows us to use methods interchangeably,
-# even when different objects use those methods in different ways.
-# This is useful in cases where different types of objects share a common interface but
-# implement their behavior differently.
+# Polymorphism is a feature of OOP that allows methods to be used interchangeably
+# across different objects, even when these methods are implemented differently.
+# This is useful when different types of objects share a common interface but
+# implement their behavior in different ways.
 
-# This is also called "Duck typing".
+# This concept is also called "Duck typing".
 # "If it walks like a duck and it quacks like a duck, it must be a duck."
-# If a derived class is able to use a method that's called on it, it can use it.
+# This means that if an object implements the necessary methods, it can be used
+# interchangeably regardless of its actual type.
 
-# For example:
+# Here's an example of polymorphism:
+
 # Base class
 class Animal:
     def __init__(self, name):
@@ -19,15 +21,17 @@ class Animal:
         # This method is intended to be overridden in derived classes.
         raise NotImplementedError("Subclasses must implement this method")
 
-# Subclass
+# Derived class
 class Dog(Animal):
     def speak(self):
         return f"{self.name} says 'Woof'"
 
+# Derived class
 class Cat(Animal):
     def speak(self):
         return f"{self.name} says 'Meow'"
 
+# Derived class
 class Bird(Animal):
     def speak(self):
         return f"{self.name} says 'Chirp'"
