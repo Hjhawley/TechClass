@@ -1,6 +1,6 @@
 # Inheritance
 
-# Inheritance is a fundamental concept in OOP. 
+# Another fundamental concept of OOP.
 # It allows you to define a class that inherits all the methods and properties from another class.
 
 # The "parent" class is the class being inherited from, also called the base class.

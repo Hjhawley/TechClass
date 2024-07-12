@@ -5,7 +5,6 @@
 # Define a base class called `Appliance` with the following attributes:
 # - name (a string)
 # - brand (a string)
-# 
 # Add a method `display_info` to the `Appliance` class that returns a string with the appliance's name and brand.
 
 # Task 2: Define Child Classes
@@ -16,7 +15,6 @@
 # - `Refrigerator`
 #   - Additional attribute: `temperature` (an integer)
 #   - Method: `cool_food`, which prints a message about cooling food with the temperature.
-# 
 # Make sure that the `display_info` method in each child class includes information about the extra attribute.
 
 # Task 3: Initialize Objects
