@@ -5,6 +5,8 @@
 # and effort. In Python, abstraction can be achieved by defining methods in the base class
 # that do not contain implementation, forcing subclasses to provide the implementation.
 
+import math  # We'll need this later
+
 # Base class with common data members and abstract methods
 class Shape:
     def __init__(self, color):
@@ -25,7 +27,7 @@ class Shape:
 # Subclass for Rectangle
 class Rectangle(Shape):
     def __init__(self, width, height, color):
-        super().__init__(color)
+        super().__init__(color)  # Call the constructor of the base class
         self.width = width
         self.height = height
 
@@ -44,30 +46,30 @@ class Rectangle(Shape):
 # Subclass for Circle
 class Circle(Shape):
     def __init__(self, radius, color):
-        super().__init__(color)
+        super().__init__(color)  # Call the constructor of the base class
         self.radius = radius
 
     def area(self):
         # Implementing the abstract method
-        return 3.14 * self.radius * self.radius
+        return int(math.pi * self.radius ** 2)
 
     def perimeter(self):
         # Implementing the abstract method
-        return 2 * 3.14 * self.radius
+        return int(2 * math.pi * self.radius)
 
     def display_info(self):
         # Overriding the method to include additional information
         return f"A {self.color} circle with radius {self.radius}"
 
 # Creating objects of the subclasses
-rectangle = Rectangle(10, 20, "blue")
-circle = Circle(15, "red")
+my_rectangle = Rectangle(10, 20, "blue")
+my_circle = Circle(15, "red")
 
 # Using the methods to demonstrate abstraction
-print(rectangle.display_info())                         # Output: A blue rectangle with width 10 and height 20
-print(f"Rectangle Area: {rectangle.area()}")            # Output: Rectangle Area: 200
-print(f"Rectangle Perimeter: {rectangle.perimeter()}")  # Output: Rectangle Perimeter: 60
+print(my_rectangle.display_info())                         # Output: A blue rectangle with width 10 and height 20
+print(f"Rectangle Area: {my_rectangle.area()}")            # Output: Rectangle Area: 200
+print(f"Rectangle Perimeter: {my_rectangle.perimeter()}")  # Output: Rectangle Perimeter: 60
 
-print(circle.display_info())                            # Output: A red circle with radius 15
-print(f"Circle Area: {circle.area()}")                  # Output: Circle Area: 706.5
-print(f"Circle Perimeter: {circle.perimeter()}")        # Output: Circle Perimeter: 94.2
+print(my_circle.display_info())                            # Output: A red circle with radius 15
+print(f"Circle Area: {my_circle.area()}")                  # Output: Circle Area: 706
+print(f"Circle Perimeter: {my_circle.perimeter()}")        # Output: Circle Perimeter: 94
