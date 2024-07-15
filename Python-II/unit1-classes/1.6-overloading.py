@@ -1,20 +1,20 @@
 # Operator Overloading
 
-# Operator overloading allows you to define how operators (see Python I - Lesson 1.4)
-# behave with user-defined objects. For instance, when you use the + operator with integers 
-# or strings, it performs addition and concatenation, respectively. With operator overloading,
-# you can define how the add (+) operator should behave with instances of your custom class.
+# Operator overloading lets you define how operators behave with user-defined objects.
+# For example, the add (+) operator performs addition with integers and concatenation with strings.
+# With operator overloading, you can define how the addition operator should behave with instances
+# of your custom classes.
 
 # Operator overloading is useful because:
 # - It allows your custom objects to interact with Python's built-in operators.
 # - It makes your classes more intuitive and easier to use.
 # - It can help in making your code cleaner and more readable.
 
-# Python allows you to overload operators by defining special methods in your class. 
-# These methods have double underscores (__) at the beginning and end of their names,
-# also known as "dunder" methods.
+# Python lets you overload operators by defining special methods in your class.
+# These methods have double underscores (__) at the beginning and end of their names.
+# These are called "dunder" methods.
 
-# Here are some common operators and their dunder methods:
+# Common operators and their dunder methods:
 # - Addition: __add__(self, other)
 # - Subtraction: __sub__(self, other)
 # - Multiplication: __mul__(self, other)
@@ -22,24 +22,22 @@
 # - String Representation: __str__(self)
 
 # Example: Overloading the + Operator
-# Let's start with an example where we create a BankAccount class. 
-# We'll overload the + operator to merge two bank accounts together.
+# We'll create a BankAccount class and overload the + operator to merge two bank accounts.
 
-# Define a BankAccount class to represent a bank account
 class BankAccount:
     def __init__(self, balance):
         self.balance = balance
 
     # Overload the + operator
     def __add__(self, other):
-        # Make sure the other object is a BankAccount object
+        # Make sure the other object is a BankAccount instance
         if isinstance(other, BankAccount):
-            # If it is, merge the balances of the two accounts
+            # Merge the balances of the two accounts
             return BankAccount(self.balance + other.balance)
         else:
             raise ValueError("Can only add BankAccount to another BankAccount")
 
-    # Overload the str operator to print the account balance in a clean format
+    # Overload the str operator to print the account balance in a nice format
     def __str__(self):
         return f"BankAccount(balance: ${self.balance:.2f})"
 
@@ -52,8 +50,6 @@ merged_account = account1 + account2
 
 # Print the result
 print(merged_account)  # Output: BankAccount(balance: $3501.25)
-
-
 
 # Now, let's overload the * operator to multiply the balance of the account by a number.
 
@@ -85,5 +81,5 @@ multiplied_account = account * 3
 # Print the result
 print(multiplied_account)  # Output: BankAccount(balance: $3030.75)
 
-# Operator overloading helps to make custom classes work intuitively with built-in operators. 
-# Practice using operator overloading with your own classes to make them more flexible and intuitive to use!
+# Operator overloading helps to make custom classes work intuitively with built-in operators.
+# Practice using operator overloading with your own classes!
