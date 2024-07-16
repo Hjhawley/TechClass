@@ -8,12 +8,13 @@
 # Examples:
 x = 10
 y = 3
-print(x + y) # Addition: Adds the values of x and y.
-print(x - y) # Subtraction: Subtracts the value of y from x.
-print(x * y) # Multiplication: Multiplies the values of x and y.
-print(x / y) # Division: Divides the value of x by y.
-print(x % y) # Modulo: Returns the remainder of x divided by y.
-print(x ** y) # Exponentiation: Raises x to the power of y.
+print(x + y)    # Addition: Adds the values of x and y.
+print(x - y)    # Subtraction: Subtracts the value of y from x.
+print(x * y)    # Multiplication: Multiplies the values of x and y.
+print(x / y)    # Division: Divides the value of x by y.
+print(x // y)   # Floor division: Divides the value of x by y and rounds down.
+print(x % y)    # Modulo: Returns the remainder of x divided by y.
+print(x ** y)   # Exponentiation: Raises x to the power of y.
 
 # 2. Comparison Operators
 # Comparison operators are used to compare values and return a Boolean value.
