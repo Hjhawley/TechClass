@@ -5,11 +5,11 @@
 
 # In some programming languages like Java and C++, indentation (spaces or tabs
 # at the beginning of a line) is mainly for readability and doesn't affect the 
-# program. However, spacing and indentation does matter in Python.
+# program. However, in Python, spacing and indentation do matter.
 
 # <--- Hash symbols are used to write comments, like this.
 # Comments are ignored by Python when the code runs. They are meant for humans.
-# Comments can help explain what the code does, or temporarily disable parts of
+# Comments can help explain what the code does or temporarily disable parts of
 # code for testing purposes.
 
 '''
@@ -21,7 +21,7 @@ like this one.
 
 print("Hello, world!")
 # The above line of code should look just like the very first program you wrote.
-# When run, it prints the text "Hello, world!" to the terminal down below.
+# When run, it prints the text "Hello, world!" to the terminal below.
 # The terminal is also sometimes called the 'console'.
 
 # Inside the parentheses is the value we want to print; in this case, a string
