@@ -69,7 +69,6 @@ i = 5
 j = 15
 print("%02d" % (i), end = "")
 print("%02d" % (j), end = "")
-print()
 
 # This prints a float with 2 decimal places, left-padded with zeros to make it
 # take up 6 spaces.
