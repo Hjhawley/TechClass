@@ -1,13 +1,17 @@
 # Recursion
 
-# Recursion is when a function calls itself in order to solve a problem.
-# It allows the function to be repeated several times as it calls itself.
+# Recursion is a programming technique where a function calls itself
+# in order to solve a problem. It allows a problem to be solved in
+# smaller, more manageable pieces, making complex problems easier to manage.
 
-# A recursive function generally has two parts:
+# A recursive function generally has two key parts:
 # 1. Base case: The condition under which the function stops calling itself.
 # 2. Recursive case: The part where the function calls itself as needed.
 
-# Example: Factorial Calculation
+# Let's look at two classic examples to understand recursion better: 
+# Factorial Calculation and the Fibonacci Series.
+
+# Example 1: Factorial Calculation
 # The factorial of a non-negative integer n is the product of all positive
 # integers less than or equal to n. It's written as (n!) and is defined as:
 # n! = n * (n-1) * (n-2) * ... * 1
@@ -37,10 +41,9 @@ print("5! =", factorial(5))  # Output: 120
 # 4 * 6 = 24
 # 5 * 24 = 120
 
-# Another Example: Fibonacci Series
+# Example 2: Fibonacci Series
 # The Fibonacci sequence is a series of numbers where each number is the
-# sum of the two preceding numbers.
-# The sequence starts with 0 and 1:
+# sum of the two preceding numbers. The sequence starts with 0 and 1:
 # 0, 1, 1, 2, 3, 5, 8, 13, ...
 
 # Fibonacci using recursion
@@ -55,7 +58,7 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 
 # Testing the Fibonacci function
-print(fibonacci(7))  # Output: 13
+print("Fibonacci of 7:", fibonacci(7))  # Output: 13
 
 # Explanation:
 # fibonacci(7) -> fibonacci(6) + fibonacci(5)
