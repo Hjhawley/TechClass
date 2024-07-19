@@ -62,9 +62,9 @@ slice4 = text[7:12] # gets "world"
 print(slice4)
 
 # List Comprehensions:
-# List comprehensions provide a concise way to create lists.
+# List comprehensions are a neat way to quickly generate lists.
 # It consists of brackets containing an expression followed by a for clause,
-# then zero or more for or if clauses. The expressions can be anything,
+# then zero or more 'for' or 'if' statements. The expressions can be anything,
 # meaning you can put in all kinds of objects in lists.
 
 # Creating a list of squares:
