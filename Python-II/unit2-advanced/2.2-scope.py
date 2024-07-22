@@ -1,51 +1,54 @@
 # Scope
 
 # Scope refers to the region of the code where a variable is accessible.
-# There are four types of scope in Python:
+# There are four types of scope:
 # 1. Local Scope
 # 2. Enclosing Scope
 # 3. Global Scope
 # 4. Built-in Scope
 
-# Understanding scope is important for writing functions and working with
-# variables efficiently.
 
 # Local Scope
 # Variables declared inside a function are in the local scope and can only be
 # accessed within that function.
 
 def my_function():
-    local_var = "I am a local variable"
-    print(local_var)  # Output: I am a local variable
+    local_var = "This is a local variable"
+    print(local_var)    # Output: This is a local variable
 
 my_function()
-# print(local_var)  # This would raise an error because local_var is not accessible outside the function
+#print(local_var)       # This raises an error because local_var is not accessible outside the function
+
 
 # Enclosing Scope
-# This is also known as the non-local scope. Variables in enclosing functions
+# This is also known as non-local scope. Variables in enclosing functions
 # can be accessed in nested functions.
 
 def outer_function():
-    outer_var = "I am an outer variable"
+    outer_var = "This is an outer variable"
 
     def inner_function():
-        inner_var = "I am an inner variable"
-        print(outer_var)  # Output: I am an outer variable
-        print(inner_var)  # Output: I am an inner variable
+        inner_var = "This is an inner variable"
+        print(outer_var)    # Output: This is an outer variable
+        print(inner_var)    # Output: This is an inner variable
+    
+    # Notice how outer_var is accessible within the inner_function
+    # Pay attention to indentation, it's how you can tell scope
 
     inner_function()
-    # print(inner_var)  # This would raise an error because inner_var is not accessible outside inner_function
+    #print(inner_var)       # This raises an error because inner_var is not accessible outside inner_function
 
-outer_function()
+outer_function()    # Output: This is an outer variable; This is an inner variable
+
 
 # Global Scope
 # Variables declared outside of all functions are in the global scope and can
 # be accessed from any function within the same module.
 
-global_var = "I am a global variable"
+global_var = "This is a global variable"
 
 def another_function():
-    print(global_var)  # Output: I am a global variable
+    print(global_var)  # Output: This is a global variable
 
 another_function()
 
@@ -61,6 +64,7 @@ def increment_counter():
 increment_counter()
 increment_counter()
 print(counter)  # Output: 2
+
 
 # Built-in Scope
 # Built-in scope includes built-in functions and exceptions provided by Python.
