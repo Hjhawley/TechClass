@@ -14,7 +14,7 @@ Implementing DRY code
 
 
 - Functions: Encapsulate repeated code into functions that can be reused.
-Functions help to abstract away the details and promote reuse.
+Functions help to abstract away details and promote reuse.
 
 # Before DRY
 print("Welcome, Alice!")

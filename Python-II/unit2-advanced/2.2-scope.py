@@ -1,7 +1,7 @@
 # Scope
 
 # Scope refers to the region of the code where a variable is accessible.
-# There are three types of scope in Python:
+# There are four types of scope in Python:
 # 1. Local Scope
 # 2. Enclosing Scope
 # 3. Global Scope
@@ -80,8 +80,8 @@ def scope_demo():
     local_var = "Local"
     def inner_demo():
         enclosing_var = "Enclosing"
-        print(local_var)  # Local variable
-        print(enclosing_var)  # Enclosing variable
+        print(local_var)  # Output: Local variable
+        print(enclosing_var)  # Output: Enclosing variable
     inner_demo()
 
 scope_demo()

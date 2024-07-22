@@ -1,8 +1,8 @@
 # Recursion
 
 # Recursion is a programming technique where a function calls itself
-# in order to solve a problem. It allows a problem to be solved in
-# smaller, more manageable pieces, making complex problems easier to manage.
+# in order to solve a problem. It breaks down complex problems into 
+# smaller, more manageable pieces.
 
 # A recursive function generally has two key parts:
 # 1. Base case: The condition under which the function stops calling itself.
