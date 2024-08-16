@@ -1,4 +1,4 @@
-# Adding Sound Effects to Pygame
+# Text and Sound Effects in Pygame
 
 # In addition to graphics and user input, Pygame supports playing sound effects and music.
 # This lesson demonstrates how to load and play a sound effect in response to a user action.
@@ -17,7 +17,7 @@ pygame.display.set_caption("Adding Sound")
 # Pygame's mixer module is used to handle sounds and music.
 # We use the Sound class to load a sound effect from a file. Make sure the file 'sound_effect.wav' is in the same directory as your script.
 # Supported formats include WAV, MP3, OGG, and more.
-sound_effect = pygame.mixer.Sound('sound_effect.wav')
+sound_effect = pygame.mixer.Sound('sound_effect.mp3')
 
 # Run the game loop
 running = True
