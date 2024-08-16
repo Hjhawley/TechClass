@@ -1,4 +1,4 @@
-# 2. Drawing Basic Shapes
+# Drawing Basic Shapes in PyGame
 
 # Pygame provides various functions to draw shapes like rectangles, circles, and lines.
 

@@ -1,5 +1,5 @@
-# 3. Handling Input
-#
+# Handling User Input in PyGame
+
 # Games often require interaction from the user. Pygame allows you to detect keyboard and mouse events.
 
 import pygame

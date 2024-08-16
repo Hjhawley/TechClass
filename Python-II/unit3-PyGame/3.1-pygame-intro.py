@@ -1,9 +1,6 @@
 # Introduction to Pygame
 # Pygame is a popular Python library used for creating video games. 
 # It provides functionality for rendering graphics, handling input from the keyboard or mouse, playing sound, and more.
-# This lesson introduces the basics of Pygame, including setting up a Pygame window, handling events, and drawing basic shapes.
-
-# 1. Setting Up Pygame
 
 # Before starting, you need to install Pygame if you haven't already.
 # You can install it using pip:

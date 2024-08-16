@@ -1,5 +1,5 @@
-# 4. Adding Sound
-#
+# Adding Sound Effects to PyGame
+
 # Pygame also supports playing sound effects and music.
 # Here’s how you can add sound to your game.
 
