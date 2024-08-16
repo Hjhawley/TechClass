@@ -15,9 +15,17 @@ pygame.display.set_caption("Adding Sound")
 
 # Load a Sound Effect
 # Pygame's mixer module is used to handle sounds and music.
-# We use the Sound class to load a sound effect from a file. Make sure the file 'sound_effect.wav' is in the same directory as your script.
+# We use the Sound class to load a sound effect from a file. Make sure the file 'sound_effect.mp3' is in the same directory as your script.
 # Supported formats include WAV, MP3, OGG, and more.
-sound_effect = pygame.mixer.Sound('sound_effect.mp3')
+sound_effect = pygame.mixer.Sound('Python-II/unit3-PyGame/sound_effect.mp3')
+
+# Set up font for displaying text
+# Pygame's font module is used to render text on the screen.
+font = pygame.font.SysFont(None, 36)  # Default font, size 36
+
+# Create a text surface
+# The text will say "Press the SPACE bar to play a sound".
+text_surface = font.render('Press the SPACE bar to play a sound', True, (255, 255, 255))  # White text
 
 # Run the game loop
 running = True
@@ -30,13 +38,15 @@ while running:
         if event.type == pygame.KEYDOWN:
             # Check if the spacebar is pressed
             if event.key == pygame.K_SPACE:
-                # Play the sound effect
-                # When the spacebar is pressed, we play the loaded sound effect.
+                # When the spacebar is pressed, play the loaded sound effect.
                 sound_effect.play()
 
-    # Fill the screen with white
-    # This clears the screen to white before drawing anything new.
-    screen.fill((255, 255, 255))
+    # Fill the screen with black before drawing anything new.
+    screen.fill((0, 0, 0))
+
+    # Blit the text onto the screen
+    # The text will be centered at the top of the window.
+    screen.blit(text_surface, (screen.get_width() // 2 - text_surface.get_width() // 2, 50))
 
     # Update the display
     # Finally, we update the display to reflect any changes.
