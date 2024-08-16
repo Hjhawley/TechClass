@@ -44,9 +44,11 @@ while running:
     # Fill the screen with black before drawing anything new.
     screen.fill((0, 0, 0))
 
-    # Blit the text onto the screen
-    # The text will be centered at the top of the window.
-    screen.blit(text_surface, (screen.get_width() // 2 - text_surface.get_width() // 2, 50))
+    # Blit the text onto the center of the screen
+    screen.blit(text_surface, (
+        screen.get_width() // 2 - text_surface.get_width() // 2,  # Center horizontally
+        screen.get_height() // 2 - text_surface.get_height() // 2  # Center vertically
+    ))
 
     # Update the display
     # Finally, we update the display to reflect any changes.

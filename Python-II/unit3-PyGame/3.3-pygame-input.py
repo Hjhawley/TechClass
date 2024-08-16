@@ -40,20 +40,20 @@ while running:
     
     # Move the rectangle left if the left arrow key is pressed
     if keys[pygame.K_LEFT]:
-        rect_x -= .1  # Move left by decreasing the x-coordinate by .1 pixels
+        rect_x -= .2  # Move left by decreasing the x-coordinate by .1 pixels
         # We pick a very small number because it will move by that amount every single frame the key is being held
         
     # Move the rectangle right if the right arrow key is pressed
     if keys[pygame.K_RIGHT]:
-        rect_x += .1  # Move right by increasing the x-coordinate
+        rect_x += .2  # Move right by increasing the x-coordinate
         
     # Move the rectangle up if the up arrow key is pressed
     if keys[pygame.K_UP]:
-        rect_y -= .1  # Move up by decreasing the y-coordinate
+        rect_y -= .2  # Move up by decreasing the y-coordinate
         
     # Move the rectangle down if the down arrow key is pressed
     if keys[pygame.K_DOWN]:
-        rect_y += .1  # Move down by increasing the y-coordinate
+        rect_y += .2  # Move down by increasing the y-coordinate
 
     # Fill the screen with white
     # Before drawing anything, we clear the screen by filling it with a background color.
